@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Todo | Task Add
+{% endblock %}
+{% block style %}
+<style>
+    .task{
+        border-radius: 5px;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <a href="../">
+        <input type="submit" name="create" id="create" value = 'Add Task'>
+    </a>
+</form>
+{% endblock %}
